@@ -1,0 +1,33 @@
+input_file: "sales_data.xlsx"
+output_file: "sales_summary.xlsx"
+sheets:
+  data: "RawData"
+  summary_by_category: "ByCategory"
+  summary_by_day: "ByDay"
+  summary_by_region: "ByRegion"
+  summary_by_sales_rep: "BySalesRep"
+metrics:
+  - sum
+  - mean
+  - count
+charts:
+  ByCategory:
+    type: bar
+    x: Category
+    y: Total
+    title: "Sales by Category"
+  ByDay:
+    type: line
+    x: Date
+    y: Total
+    title: "Daily Sales"
+  ByRegion:
+    type: bar
+    x: Region
+    y: Total
+    title: "Sales by Region"
+  BySalesRep:
+    type: bar
+    x: SalesRep
+    y: Total
+    title: "Sales by Sales Rep"
